@@ -7,6 +7,7 @@ WORKDIR /hastebin
 
 RUN npm install
 
+RUN mkdir data
 RUN mv config.js data/
 RUN ln -s data/config.js config.js
 
