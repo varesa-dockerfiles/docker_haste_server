@@ -7,6 +7,9 @@ WORKDIR /hastebin
 
 RUN npm install
 
+RUN mv config.js data/
+RUN ln -s data/config.js config.js
+
 VOLUME ["/hastebin/data"]
 
 EXPOSE 7777
