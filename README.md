@@ -1,5 +1,8 @@
 ### Docker Haste-Server
 
+Forked from https://github.com/AnthoDingo/docker-haste-server
+Moved config file to the docker volume
+
 #### Exposition
 
 You can expose the port 7777 on all interface like that :
