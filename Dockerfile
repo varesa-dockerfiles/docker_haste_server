@@ -1,4 +1,4 @@
-FROM node:0.10.40
+FROM node:9.4
 MAINTAINER AnthoDingo <lsbdu42@gmail.com>
 
 RUN git clone https://github.com/seejohnrun/haste-server.git /hastebin
