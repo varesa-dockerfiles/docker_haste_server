@@ -1,4 +1,4 @@
-FROM node:9.4
+FROM bucharestgold/centos7-s2i-nodejs:10.x
 MAINTAINER AnthoDingo <lsbdu42@gmail.com>
 
 USER root
@@ -6,7 +6,8 @@ USER root
 # Fix for openshift parent image missing libcurl
 RUN yum install -y libcurl && yum clean all
 
-RUN git clone https://github.com/seejohnrun/haste-server.git /hastebin
+
+RUN LD_LIBRARY_PATH=/opt/rh/httpd24/root/usr/lib64/ git clone https://github.com/seejohnrun/haste-server.git /hastebin
 
 WORKDIR /hastebin
 
