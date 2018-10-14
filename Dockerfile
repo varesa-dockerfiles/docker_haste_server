@@ -3,6 +3,9 @@ MAINTAINER AnthoDingo <lsbdu42@gmail.com>
 
 USER root
 
+# Fix for openshift parent image missing libcurl
+RUN yum install -y libcurl && yum clean all
+
 RUN git clone https://github.com/seejohnrun/haste-server.git /hastebin
 
 WORKDIR /hastebin
